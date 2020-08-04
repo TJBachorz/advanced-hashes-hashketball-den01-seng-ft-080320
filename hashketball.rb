@@ -128,6 +128,13 @@ def game_hash
 end
 
 
+<<<<<<< HEAD
+=======
+def num_points_scored(player_name)
+  return iterate_by_player_statistic(player_name, :points)
+end
+
+>>>>>>> db12cf0d5eed4fde416c9e29536469305e434837
 def num_points_scored(player_name)
   return iterate_by_player_statistic(player_name, :points)
 end
@@ -312,16 +319,24 @@ def iterate_by_player_statistic(player_name, statistic)
   end
 end
   
+<<<<<<< HEAD
 def winning_team()
   home_points = [0, ""] 
   away_points = [0, ""]
   game_hash[:home].each do |attributes|
     binding.pry
+=======
+'''def winning_team()
+  home_points = [0, ""] 
+  away_points = [0, ""]
+  game_hash[:home].each do |attributes|
+>>>>>>> db12cf0d5eed4fde416c9e29536469305e434837
     home_points[1] = attributes[:team_name]
     attributes[:players].each do |stats|
       home_points[0] += stats[:points]
     end
   end
+<<<<<<< HEAD
   game_hash[:away].each do |attributes|
     binding.pry
     away_points[1] = attributes[:team_name]
@@ -332,5 +347,10 @@ def winning_team()
 end
 
 winning_team()
+=======
+end
+
+winning_team()'''
+>>>>>>> db12cf0d5eed4fde416c9e29536469305e434837
 
 # Write code here
